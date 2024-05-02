@@ -2,7 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Cor de fundo padrão */
+    color: #333; /* Cor do texto padrão */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
 }
 
 .container {
@@ -12,6 +14,7 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave */
 }
 
 h1 {
@@ -27,6 +30,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -43,8 +47,7 @@ button:hover {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: auto;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .modal-content {
@@ -54,7 +57,6 @@ button:hover {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    /* Limita a largura do formulário */
 }
 
 .close {
@@ -62,6 +64,7 @@ button:hover {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .close:hover,
@@ -100,6 +103,7 @@ button:hover {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .goal-item button:hover {
@@ -132,24 +136,78 @@ textarea {
 
 button[type="submit"] {
     width: 100%;
-    /* Faz o botão preencher a largura do formulário */
     padding: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Adicione esses estilos para as animações */
-.fade-in {
-    opacity: 1;
+/* Modo Escuro */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
 }
 
-.fade-out {
-    opacity: 0;
+.container.dark-mode {
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+button.dark-mode {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button.dark-mode:hover {
+    background-color: #0056b3;
+}
+
+.modal.dark-mode {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content.dark-mode {
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.close.dark-mode {
+    color: #fff;
+}
+
+.goal-item.dark-mode {
+    background-color: #666;
+}
+
+.goal-item.dark-mode h3 {
+    color: #fff;
+}
+
+.goal-item.dark-mode p {
+    color: #ccc;
+}
+
+.goal-item button.dark-mode {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.goal-item button.dark-mode:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"].dark-mode {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button[type="submit"].dark-mode:hover {
+    background-color: #0056b3;
 }

@@ -126,3 +126,16 @@ document.querySelector('.close').addEventListener('click', closeModal);
 
 // Chamada inicial para exibir os objetivos
 displayGoals();
+
+
+// JavaScript para alternar entre light/dark mode
+const toggleDarkMode = () => {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+};
+
+// Exemplo de botão para alternar o modo
+const darkModeToggleBtn = document.createElement('button');
+darkModeToggleBtn.textContent = 'Modo Escuro';
+darkModeToggleBtn.onclick = toggleDarkMode;
+document.body.appendChild(darkModeToggleBtn);
